@@ -1,0 +1,28 @@
+Dosya ve Dizinlerde Sahiplik Görüntüleme
+
+  ls -al
+  
+Dosya ve Dizinlerin Sahibini Değiştirme
+  
+  1. sudo chown kullanıcı_adi dosya_adı(dizin_adı)
+  
+  2. sudo chgrp grup_adı dosya_adı
+-> chfrp(change group)
+  
+Toplu Sahiplik Değişiklikleri
+
+  sudo chown sahip_adı sahiplik_değiştirilecek_dosya
+  
+  sudo chgrp grup_adı grubu_değiştirelecek_dosya
+ 
+Bir dizinin sahipliğini değiştirirken içerisinde bulunan dosya ve dizinlerinin sahiplilerini değiştirmek için kullanılan komut
+
+  sudo chown -R kullanıcı_adı dizin_adı
+  
+  "R" (recursive) : bir dizinin sahipliğini değiştirirken içinde bulunan dosyaların ve dizinlerin de sahipliklerini değiştirmemize yarar.
+  
+  sudo chgrp -R grup_adı dizin_adı
+ 
+Bütün dosya ve dizinlerin, sahiplikleri ve grubu değiştiren komut
+
+  sudo chown -R kullanıcı_adı:grup_adı * 

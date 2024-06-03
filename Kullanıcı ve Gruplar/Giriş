@@ -1,0 +1,18 @@
+Kullanıcı Nedir ?
+  Linux'ta sistem kaynaklarına, içinde bulunan dosyalara ve uygulamalara erişebilmek için kullanıcıların giriş yapması
+  yani oturum açması(login) gerekmektedir. 
+  Linux çok kullanıcılı bir sistemdir. Birçok program, sunucu yazılımı, komut; çok kullanıcılı sistem üzerinde çalışır.
+  Modern dağıtımlarda birden fazla kullanıcı hazır gelir.(root-normal)
+  Root kullanıcısı, tüm yetkilere ve erişimlere sahiptir. Sistem seviyesinde yetkiler için kullanılır.
+  Ev dizinleri /root dizinidir.
+  Genel amaçlı kullanıcılar, kendilerine veya gruplarına tanımlı yetkileri kullanırlar.
+  Ev dizinleri /home dizini altında bulunurlar.
+  
+Grup Nedir ?
+  Sistem kaynakalara, dosyalara ve uygulamalara birden fazla kullanıcını bır arada bulunduğu erişim gruplarıdır.
+  GID = Grup ID
+  Bir kullanıcı birden fazla gruba üye olabilir.
+  Grup üyelikleri /etc/group altına tanımlanır.
+
+
+ 

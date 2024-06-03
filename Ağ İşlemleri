@@ -1,0 +1,87 @@
+Sanal Makine Ağ Ayarları
+Sanal makine kapalıyken ayarlar girip network sekmesine tıklayın. Ağ Bağdaştırıcısını etkinleştirin. (NAT)
+
+Bağlantı Bilgilerini Öğrenme
+
+  ifconfig
+  ip -> ip addr show(ip a) : Bilgisayarımızın internete bağlandığı adres bilgilerini öğrenebiliriz.
+  
+  hostname -I : sadece IP adresini elde ediriz.
+
+Bağlantı Testi ve Ping Kavramı
+
+  ping: Ağ üzerinden paket gönderip, geri gelmesini bekleyerek yanıt süresini ölçer. 
+    ping IP_adresi/domain_adresi
+    CTRL+C
+    "-c 5" -> sadece 5 tane ping atılır.
+    
+Ağ Trafiğini İzleme
+
+  tcpdump programı, bilgisayarımızdan giden ve gelen tcp paketlerini gösterir.
+    sudo tcpdump -v 
+  
+  iftop programı, bağlandığımız sunucuları ve gelen/giden paket istatistiklerini gösterir.
+    sudo apt install iftop
+    sudo iftop
+      homerouter.cpe -> modemimiz
+      
+      
+Wireshark ile Ağ Trafiğini İzleme
+
+   sudo apt install wireshark 
+   sudo wireshark 
+   
+Dosya İndirme
+
+  wget programı, dosya indirmeyi sağlayan bir indirme yöneticisidir.
+    wget sayfa_adresi/indirelecek dosyanın bağlantısı
+    
+SSH ile Güvenli Bağlantı
+
+  Kablolu Bağlatı -> ağ ayarları 
+  kablolu bağlantı sonlandır | aktif hale getir
+  
+  aygıtlar -> ağ -> Köprü Bağdaştırıcısı
+  
+  sudo apt install ssh
+  
+  sudo systemctl enable ssh
+  
+  sudo systemctl status ssh 
+  (port değiştir)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  windows -> cmd 
+              ssh linux_kullanici_adi@IP_adresi
+              
+              ls
+              unmae -a 
+              
+              sudo systemctl disable ssh -> durdurur
+                              stop -> geçici durur
+DNS(Domain Name System) Kavramı 
+
+  İsimleri, IP adreslerine çevirmek için kullanılan bir sistemdir.
+  
+  
+DNS Sorguları Yapmak 
+
+  nslookup komutu, DNS sorguları için kullanılır.
+  
+    nslookup sayfa_adresi
+  
+    nslookup IP_adresi
+
+    nslookup -query=mx sayfa_adresi -> sayfanın mail sunucuları
+    
+    nslookup -query=ns sayfa_adresi -> sayfanın isim sunucuları

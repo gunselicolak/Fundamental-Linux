@@ -1,0 +1,17 @@
+İşletim sistemi çekirdek yazılımı
+Özgür yazılım projesidir.
+GNU/Linux işletim sistemi dağıtımlarının temelini oluşturur.
+
+GNU Tasarısı : 1984 yılında kullanıcı arabirimlerinin tasarlandığı bir projedir. Kişisel bilgisayarlarda kullanılacak yazılımların geliştirildiği tasarıdır. 
+Linux : 1991 yılında geliştirilmeye başlanmış işletim sistemi çekirdeğidir.
+GNU ile Linux birbirlerinin eksiklerini tamamlayan iki temel yapıdır. 
+1993 yılında ilk GNU/Linux dağıtımları çıkmıştır.(debian)
+Masaüstü ve sunucular(Ubuntu, CentOs, Fedora, Debain), 
+cep telefonları(Android, Chrome OS, Akıllı Saatler, Tabletler),
+gömüllü sistemler(Uydular, Televizyonlar, Akıllı Ev/Şehir Sistemleri, Geliştirme Kartları) 
+ve diğer sistemlerde (Güvenlik Cihazları, Film Stüdyoları, Askeri Sistemler, Ülke/Bölge Sistemleri)
+
+Sanallaştırma Teknelojisi : (Depolama, İşlemci, Ağ, Görüntü İşlemci, Geçici Bellek(RAM))
+Web Sunucuları, Depolama Sistemleri, Kurumsal IT Sistemleri, Veri İşleme gibi alanlarda kullanılır.
+
+VirtualBox Misafir Eklentileri(Guest Additions) : Sanal makineye sürükleyerek dosya eklemek.

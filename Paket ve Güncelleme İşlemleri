@@ -1,0 +1,43 @@
+Paket ve Paket Yöeticisi Nedir?
+
+Paket KAvramı 
+Paketler, genelde bir yazılımın derlenmiş hali ya da kaynak kodudur.
+  Paket -> Kaynak Kodlar - Bağımlılıklar - Kurulum Dosyaları - Dökümantosyan 
+ 
+Paket Yöneticileri Kavramı 
+Paket yöneticileri, bilgisayarımıza bir paketi kolaylıkla kurmamızı, kaldırmamızı ve yapılandırmamızı sağlayan sistemlerdir.
+Aslında paket yöneticileri de birer yazılımdır.
+
+apt Paket Yöneticisi 
+apt, bilgisayarımıza bir paketi kolaylıkla kurmamızı, kaldırmamızı ve yapılandırmamızı sağlayan paket yönetim sistemidir.(Ubuntu-Debian)
+  apt -> update : paketlerin listesini günceller.
+      -> install : paketi yükler. (örn: apt install wireshark)
+      -> remove : paketi kaldırır. (örn: apt remove wireshark)
+      -> upgrade : kurulu paketleri günceller.
+      
+Paket Yöneticisi Önbelleğini Güncellemek
+  cat /etc/apt/sources.list : apt nin internetteki hangi kaynaklara bağlanarak paketleri güncellediği görüntülenir.
+  sudo apt update
+  
+Paket Yöneticisi ile Paket Kurulumu 
+  sudo apt install vlc
+  apt search image manipulation
+  
+Paket Yöneticisi ile Paket Güncelleme
+  apt list --upgradable : güncellenebilir uygulamalar listelenir.
+  apt list --upgradable | wc : kaç tane satır(paket) var.
+  sudo apt install gedit -> güncellemek için yeniden kurma komutu kullanılabilir.
+  sudo apt upgrade -> tüm paketleri günceller.
+  
+Paket Yöneticisi ile Paket Kaldırma
+  sudo apt remove vlc 
+  sudo apt autoremove : kullanılmayan ve ihtiyaç duyulmayan paketler kaldırılır.
+  sudo apt purge wireshark : paketi kaldırırken paketle ilgili dosyaları ve ayarları da sistemden kaldırır.
+  
+Paket Dosyasından Paket Kurulumu 
+  dpkg programı, Debian paket yönetim sisteminin temelini oluşturur.
+    sudo dpkg -i leafpad_
+    sudo !! : Bir önceki komutu sudo ile çalıştırır.
+    dpkg -l : dosya listesi
+    dpkg -l | grep leafpad
+    sudo dpkg -r leafpad

@@ -1,0 +1,23 @@
+Sahiplik ve İzin Kavramları
+
+  Linux, çok kullanıcılı bir sistemdir.
+  
+    Dosya
+                Kullanıcı  
+    Dizin                           İzinler
+                Grup
+    Uygulama      
+
+    : ls -al 
+    1.sütun -> dosya izinleri(kullanıcı-grup-herkes) |okuma(read"-r") yazma(write"-w") çalıştırma(execute"-x")| 
+    3 sütun -> sahip kullanıcı
+    4.sütun -> sahip grup
+    
+    
+    Root Yetkileri ile Çalışma
+    
+    Tüm erişim izinlerine sahiptir.
+    Dosyaları okuyabilir, değiştirebilir, çalıştırabilir.
+    Tüm izinleri değiştirebilir.
+    Tüm sahiplikleri değiştirebilir.
+    sudo komutu ile kullanılır.

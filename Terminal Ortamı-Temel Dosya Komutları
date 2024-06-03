@@ -1,0 +1,181 @@
+Kurulum : Doğrudan Yükleme - İçe Aktarma 
+
+Terminal Ortamı: Kabuk(Shell) ile etkileşime geçmek için kullandığımız grafik arabirimidir.
+Kabuk(Shell) kullanarak komut ve programları çalıştırınız.
+Terminal ekranı, çalışan komutların çıktılarını görmemizi sağlar.
+
+whoami : oturum açan kullanıcını ismi yazar. "ben kimim"
+uname : sistem özelliklerini okumamıza yarayan programdır.
+uname -a : sistem özelliklerini ayrıntılı bir şekilde ekrana yazan komut
+ping -c4 ubuntu.com : program - parametre(4 defa ping at) - argüman 
+
+Ctrl+Alt+T : Terminal pencersini açar. 
+
+@ önce gelen kelime şu anda oturum açan kullanıcının adını belirliyor.
+@ sonra şu anda oturum açtığımız makinenin ismini verir.
+tilda(kullanıcı ana dizini) işareti şuan işlem yapmakta olduğumuz klasörü temsil eder.
+$ : şu anda oturum açan kullanıcının bu terminalde normal kullanıcı haklarıyla işlem yaptığını ifade eder.
+
+date : şu anki tarih ve zamanı yazar.
+ls: dosya ve klasörleri listeleme komutu.
+ls -a : gizli dosya ve klasörler listelenir.
+. : dosya ve klasörlerin başındaki nokta gizli olduklarını belirtir.
+ls -l : dosyaları dizin içerisinde ayrıntılı ve alfabetik bir şekilde listelenir.
+Komuttan sonra parametre kullanmak için "-" konulur.
+
+Komutlar
+
+pwd : içinde bulunulan dizini gösterir.
+ls : bir dizinin içindeki dosya ve klasörleri listelemek için kullanılır.
+cd(change directory) : herhangi bir dizinin içine gidebilmek için kullanılır.
+cd .. : bir üst dizine geri dönme
+
+! Kısayol : Tab kullanarak yazım tamamlandırılabilir.
+
+"man" : kılavuzu bulunan komut ve programların kılavuzlarını okur.
+Q tuşuna basarak kılavuzdan çıkabiliriz.
+
+history : oturum açan kullanıcının bu zamana kadar terminal penceresine yazdığı komutları listeleyen
+ve parametreleriyle beraber sıralı şekilde listeler.
+history -c : terminal geçmişini temizler.
+
+Temel Dosya Komutları
+
+Linux Dosya Sistemi 
+Linux'ta her şey bir dosyadır.
+
+Dosyalar(-)
+Dizinler(d)
+Bağlantılar(l)
+
+Linux'ta dosya sistemi hiyerarşiktir.
+
+/ : Kök dizin tüm dizinleri içerir ve hiyerarşinin başladığı yerdir.
+
+Kök dizin altında bulunan dizinler
+  /bin : Temel kullanıcı komutları 
+  /boot : Açılıştaki statik dosyalar
+  /dev : Cihaz dosyaları
+  /etc : sisteme özel ayarlar
+  /home : Kullanıcı ana dizinleri
+  /lib : Temel kütüphaneler ve çekirdek modülleri
+  /media : Çıkarılabilir ortam dosyaları
+  /mnt : Yerleştirilen dosya ortam dosyaları(hard disk)
+  /srv : Servis dosyaları
+  /tmp : Geçici dosyalar
+  /var : Çeşitli dosyalar
+  /root : Root kullanıcısı için ana dizin
+  
+Dosya Sisteminde Gezinme ve Listeleme
+
+  ls : dosya ve klasörleri listeler
+  ls -a : gizli dosya ve klasörleri listeler.
+  mavi -> dizin beyaz -> norma dosya pembe ve diğer -> farklı uzantılardaki dosyalar
+  ls -l : dosyaları dizin içerisinde ayrıntılı ve alfabetik bir şekilde listelenir.
+  pwd : bulunduğumuz klasörü görmek için kullanacağımız komut.
+  clear : terminali temizler.
+  Ulaşmak istediğimiz klasörleri bütünleşik olarak da yazabiliriz.
+  cd - :c bir önceki bulunduğumuz dizine geçiş
+  
+Dosya ve Dizin Oluşturma 
+
+mkdir : yeni dizin oluşturma. Aralarına bir boşluk koyarak birden fazla dizin(klasör) aynı anda oluşturulabilir.
+touch : yeni dosya olusturma. Aralarına bir boşluk koyarak birden fazla dosya aynı anda oluşturulabilir.
+
+Silme 
+
+rm(remove) : Herhangi bir dosya veya klasörü silme komutu.
+rm -r : Dizinlerin içindeki dosya ve klasörleri siler.
+
+Kopyalama 
+
+cp(copy) : Dosya ve klasörü kopyalar.(kopyalanacak dosya kopyalanacak ismi-kopyalanacağı dizin/- ../(bir üst dizine kopyalar))
+-->  cp /home/gunselicolak/Odevler/dersprogramım.txt /tmp/eskidesprogramım.txt
+cp -r : Dizini başka dizine koyalama komutu
+-->  cp -r Final/ dersler/
+
+Dosya ve Dizinleri Taşıma => mv(move) : (taşınacak_dosya taşınacak_yer)
+
+Yeniden İsimlendirme 
+
+mv : Dizin ve dosya isimlerini değiştiren komut. isimlendirilecek_dosya yeni_isim(dizin/yeni_isim)
+
+Dosya ve Dizinleri Arşivleme-Çıkarma
+
+tar -zcvf : Arşivleme komutu. (..tar arşivlenecek_dosya)
+tar -zxvf : Çıkarma komutu. 
+
+Nano ile Dosya Düzenleme
+
+Nano : Terminal üzerinde çalışan bir text editor(metin düzenleyici).
+nano : içine girmek için yazılan komut (açmak istenen doaya - yeni dosya)
+Ctrl+X : Çıkmak için 
+cat : dosya okumak için kullanılan komut.
+Ctrl+O : Dosya ismini değiştimek için.
+Ctrl+W : Dosya için arama yapmak.
+Alt+W : Aramada bir sonraki bulunana gider.
+
+Dosya Düzenleyiciler
+
+vi komutu : vim metin editörünü çağırmak için kullanılır.
+: -> Text editör modundan çıkarak komut satırı moduna geçer.
+:qa : çıkmak için
+
+gedit programı : grafik arabirimine sahip bir metin editörüdür.
+
+Dosyaları Okuma
+
+cat(concatenate) : dosyaları okuma komutu. birden fazla dosyayı aynı anda açabilir.
+cat -n : satır rakamlarını görüntülemek için.
+cat -E : satır sonlarını işaretleme parametresi
+tac : bir metin belgesini satırlarını sondan başa şekilde gösterir.
+
+Farklı Dosyaları Okuma 
+
+head komutu : Bir dosyanın ilk satırlarını ekrana yazdırır.(varsayılan: ilk 10 satır)
+head -n(sayı) : Baştan kaç satır okunacağını belirleyebiliriz.
+
+tail komutu: Bir dosyanın son satırlarını ekrana yazdırır.
+tail -n: 
+tail -f : dosyayı canlı olarak izleyebiliriz.
+
+more komutu : terminal ekranına sığmayan metinleri okumayı kolaylaştırır.
+ENTER : Terminal penceresinde aşağ iner
+Q : Terminal penceresine döner.
+
+nl komutu : boş olan satırlar hariç diğer satırlara satır numarası ekler.
+
+Dosyalar Hakkında Bilgi Alma
+
+file : dosyanın türünü veren komut
+wc : dosya hakkında bilgi toplamak için kullanacağımız komut (satır kelime bayt_boyutu)
+wc -w : sadece kelime sayısını verir
+wc -l : sadece satır sayısını verir
+wc -c : sadece bayt cinsinde boyutunu verir
+wc -L : en uzun satırın kaç harften oluştuğunu verir
+
+Verileri(Dosyaları) Sıralama
+
+sort komutu : Dosyaları sıralamamızı sağlar.
++ "-k" parametresi : Dosyaları belirttiğimiz sütundan sıralamamızı sağlar.(sort -k 2 ..txt)
++ "-c" parametresi : Bir listenin sıralı olup olmadığını öğrenmemizi sağlar.
++ "-r" parametresi : Bir listeyi tersten sıralamamızı sağlar.
++ "-o" parametresi : Bir listenin sıralamasını kaydetmemizi sağlar. (-o yeni_dosya)
++ "-R" parametresi : Bir listeyi karışık bir halde sıralamamızı sağlar.
+
+Dosya İçinde Arama
+
+grep komutu : Dosya içerisinde arama yapmamızı sağlar. 
+Aranacak kelime tırnak içinde yazılır ardından hangi dosya da bulunduğu yazılır.
++ "-v" : Hariç tutma parametresi. Aradığımız kelimenin bulunmadığı satırlar vardır.
++ "-i" : Büyük küçük harf duyarlılığını ortadan kaldıran parametre
++ "-l" : Sadece bulunduğu dosya isimlerini sıralanır.
+-c : Bulunma sayısını verir.
+
+
+
+df : Bellekte kalan boş yeri gösterir
+expr : Matematiksel işlemleri yapar (Örn: expr 5*10)
+find : Belli bir dosyayı dizinlerde arama
+ifconfig : Ağ kartı bilgilerini gösterir
+shutdown : Sistemi kapatır

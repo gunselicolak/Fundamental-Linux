@@ -1,0 +1,53 @@
+Özgür Yazılım Dünyası ve GNU/Linux
+
+Özgür Yazılım Nedir?
+
+  <<Özgür yazılım, kamuya mal olmuş yazılımdır.
+  GNU Genel Kamu Lisansı(GPL) - GNU FDL - Creative Commons - Mozilla - BSD - LGPL - AGPL
+  Her özgür yazılım, açık kaynak kodludur.
+  Özgür yazılım, korsan yazılım demek değildir. 
+  
+GNU Nedir?
+  <<Özgür yazılım, kullanıcıların özgürlüğüne ve topluluğa saygı duyan yazılım demektir.>>
+  Kaynak: https://www.gnu.org/philosophy/free-sw.tr.html
+  4 Temel Özgürlük 
+  0. Özgürlük : Herhangi bir amaç için, istediğimiz şekilde yazılımı çalıştırma özgürlüğü
+  1. Özgürlük : Her ne istiyorsanız onu yaptırmak için programın nasıl çalıştığını öğrenmek ve onu değiştirme özgürlüğü
+  2. Özgürlük : Kopyaları dağıtma özgürlüğü, böylece başkalarına yardım edebilirsiniz
+  3. Özgürlük : Değiştirilmiş sürümlerinizin kopyalarını dağıtma özgürlüğü
+  
+Dağıtımların Özellikleri ve Lisansları
+  https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions
+  Tamamen özgür yazılım felsefesine sahip ve bu lisanslar altında dağıtılan dağıtımlar: PureOs
+                                                                                        Parabola
+                                                                                        Musix
+                                                                                        Hyperbola
+  Ticaret için kullanılan ücretli işletim sistemleri : Novell Open Enterprise Server
+                                                       Red Hat Enterprise Linux (RHEL)
+                                                       
+Desktop Environment Nedir?
+  İşletim sistemi üzerine kurulan ortak bir kullanıcı arayüz yazılımıdır.
+  Unity - MATE - Cinnamon - GNOME - KDE(KDE Plasma 5) - XFCE
+  Birçok yazılımın birleşmesinden oluşur.
+  Sadece ikonlar, pencereler değil, bir çok yaygın programı da içerirler.
+  Masaüstü - Klasörler -İkonlar - Pencereler - Düzenleme Yazılımları(Metin, Görsel) - Diğer Araçlar ve Wİdget'lar
+  
+XFCE Masaüstü Kurulumu
+  sudo apt install xfce4
+  gdm3
+  çıkış yapıp ayarlardan masaüstü ortamını seç
+  
+Mate Masaüstü Kurulumu
+  sudo apt update
+  sudo apt install ubuntu-mate-desktop
+  çıkış yapıp ayarlardan masaüstü ortamını seç
+  
+Pardus Nedir?
+  PARDUS, Debian GNU/Linux temelli Özgür ve Açık Kaynak kodlu bir işletim sistemidir.
+  TÜBİTAK ULAKBİM bünyesinde geliştirilmektedir.
+  Eğitim - Sağlık - Kamu YÜnetimi - Belediyeler - Güvenlik - Günlük Kullanım
+  Tercih Edilme Sebepleri : Özgür ve Ücretsiz - Hızlı - Güvenilir - Kolay Kullanım - Canlı sürümü - Özelleştirilebilir
+  
+Pardus Kurulumu
+  https://www.pardus.org.tr/
+  

@@ -1,0 +1,77 @@
+Shell Programlama Nedir?
+  sh bash
+  echo komutu : ekrana bir şeyler yazdırmamızı sağlar.
+  
+  nano merhaba.sh
+  ilk satır hangi shell türüyle çalıştırılacağı yer alır. 
+    #!/bin/sh
+    echo "Merhaba Dünya"
+    touch merhaba.txt
+    echo "biz dostuz" >> merhaba.txt
+    
+  mv merhaba.sh Desktop/
+  chmod +x merhaba.sh -> yetki verildi.
+  
+sh || bash || dash Farkı
+  sh -> ilki
+  bash -> daha yaygın kullanım
+  dash -> daha güvenli ve hızlı 
+  
+  file -h /bin/sh
+  file -h /bin/bash
+  file -h /bin/dash
+  
+Shell Programlama Örneği I
+  nano deneme1.sh
+  
+  ##!/bin/bash
+  
+  echo "isminizi yazın: "
+  read name # ekrandan girdi alınır isim değişkeni olarak tutulur.
+  echo "merhaba $name hoşgeldin"
+  
+  ((toplam=59+51))
+  echo $toplam
+  "#(diyez)" operatörü : program içerisinde yorumlar bırakmamızı sağlar.
+  
+Shell Programlama Örneği II
+  nano kimlikdogrulama.sh
+  
+  echo "kullanıcı adınızı giriniz: "
+  read isim
+  echo "kullanıcı parolanızı giriniz: "
+  read password
+  
+  if [[ ($name == "gunseli" && $password == "abcde") ]]; then 
+  echo "merhaba $name ! Hoşgeldin"
+  login=true
+  else
+  echo "Giriş başarısız, tekrar deneyin."
+  login=false
+  fi
+  
+  counter=1
+  
+  while [ $login ]
+  do 
+  echo "Platform yükleniyor % $((counter*10)) "
+  sleep 0.3
+  if [ $counter -eq 10 ]; then
+  break 
+  fi
+  
+  ((conuter++))
+  done
+  
+Başka Bir Shell Programı Çağırma
+  nano tarih.sh
+  
+  echo "Merhaba!"
+  date
+  echo
+  cal
+  
+  echo "Görüşmek üzere"
+  
+  nano kimlikdogrulama.sh
+  bash tarih.sh

@@ -1,0 +1,103 @@
+Sürec(Process) Kavramı 
+ Linux'ta  çalışan her program bir süreçtir. Ancak bir program, birden fazla süreç olarak çalışsabilir.
+ 
+ Process ID(PID)          User ID(UID)              Parent Process ID(PPID)
+ Süreç Kimliği            Kıllanıcı Kimliği         Üst Süreç Kimliği 
+ 
+            5   | 1000 |  1
+            
+     6 | 1000| 5         7 | 1000| 5
+     
+     
+     
+Çalışan Süreçleri Listeleme 
+
+  Windows İşletin Sisteminde Görev Yöneticisi -> Ayrıntılar 
+  Linux'ta 
+  1.Grafik Arayüz Kullanmak : Sistem Gözlemleyicisi
+  2.Terminal Üzerinden Listelemek : 
+    ps komutu : Sistem üzerinde çalışan süreçleri görebilmenizi sağlar.
+    ps -ef : sistem üzerinde çalışan tüm processleri ayrıntılarıyla beraber görüntüler.(ps -aux)
+      cmd -> çalıştırılan komut veya program
+    ps -au(kullanıcı_adı) : sadece bir kullanıcını kullandığı processler görüntülenir.
+    
+    
+Süreçlerin Canlı Takibi 
+
+  sudo apt install htop : htop programını yükleyelim.
+  
+  "htop" komutu : Süreçleri canlı olarak takip edebilmemizi sağlar.
+  1 - 2 -> işlemcimin çekirdekleri 
+  Mem -> RAM
+  Swp -> Takas alanı
+  sağ tarafta süreçlerin istatistiği var.
+  F5(Tree) ile daha ayrıntılı inceleyebilir.
+  
+Süreçlerin Sonlandırılması
+
+  "kill" komutu : Süreçleri sonlandırmamızı sağlar.
+    kill process_id
+  
+  Metin Düzenleyici -> gedit
+  
+  yeni terminam açma -> Ctrl+Shift+T
+  
+   ps -ef | grep gedit -> sadece gedit processini getirir.
+   
+ 
+Süreç Sonlandırma Çeşitleri 
+
+ kill -l -> kill'in kullanabileceği sinyaller (9-15 parametreleri)
+  SIGTERM -> programa hadi sen sonlan mesajı yollar.(yavaş kapatma)(15)
+  SIGKILL -> programı aniden kapatır.(9)
+  
+   kill -9 process_id
+  
+ pkill firefox -> process komutunda firefox geçen bütün prcessleri sonlandırır.
+ 
+ htop -> bütün processleri gösterir. (F9 ile sonladırabiliriz.)
+  
+Arka Plan Süreç Yönetimi
+
+1. Uygulamayı başlatırken arka planda başlatmak.
+
+ Bir süreci arka planda başlatmak komut sonuna : &(Shift+6)
+ Terminale bağlı olmadan süreç başlatmak komut başına : nohup 
+ 
+2. Uygulama çalıştıktan sonra arka plana almak 
+ "Ctrl+Z" kısayolu : Bir işlemi arka plana almamızı sağlar.
+ 
+ "bg" komutu : Arka planda çalışan işleri görmemizi sağlar.
+ 
+ "disown" komutu : Terminali kapattıktan sonra uygulamanın devam etmesini sağlar.
+   disown -h %process_id
+
+Linux'ta Servis Kavramı 
+
+ Servis(Service): Linux'ta arka planda, gerektiğinde kullanılmak için sürekli çalışan 
+ uygulamalara servis denir.
+ -Sistem tarfından başlatılır.   (Yönetici yetkileri ile)-Yönetilebilir.     -Eklenebilir/Silinebilir.
+  -Kullanıcı Yönetimi
+  -Kayıt Tutma(Logging)
+  -Web Servisleri
+  -Uzaktan Erişim Servisleri
+  -Sanallaştırma Servisleri ... sevis örnekleridir.
+  
+  
+Servisleri Görüntüleme
+
+"systemctl" progrramı: Linux'ta sistem üzerindeki servisleri yönetmemizi sağlar.
+"list-units --type service" komutu : Sistem üzerindeki servis ünitelerini görüntülememizi sağlar.
+"list-units --type service --state running" komutu : Sistem üzerindeki yalnızca o an çalışan servis ünitelerini görüntülememizi sağlar.
+"systemctl status servis_adi" : bir servis hakkında bilgi almak için
+
+
+Servis Yönetimi 
+
+Sadece yönetici yetkilerini kullanarak yapılır.
+
+ sudo systemctl stop servis_adi
+ 
+ sudo systemctl start servis_adi
+ 
+ sudo systemctl restart servis_adi

@@ -1,0 +1,16 @@
+Grupları Listeleme
+
+  cat /etc/group 
+    grup ismi : grouppasswd : grup id : grupta yer alan kullanıcılar 
+
+Grupları Ekleme
+
+  sudo addgroup grup_adı
+
+Grup Silme
+
+  sudo delgroup grup_adı
+  
+Kullanıcı Gruplarını Yönetme
+
+  sudo usermod -a -G grup_adı kullanıcı_adı

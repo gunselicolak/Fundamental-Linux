@@ -1,0 +1,25 @@
+Kullanıcıları Görüntüleme 
+
+  cat /etc/passwd : bütün kullanıcıların listesi
+    Sütun -> kullanıcı adı : passwdh? : kullanıcı id : grup id : kullanıcının tam adı : /kullanıcının home dizini : kullanıcının kabuk erişimi
+  cat /etc/shadow : kullanıcı parolaları dosyası( sudo cat shadow )
+    kullanıcı adı : parola özeti(password hash) shaw 216 algoritma (hashing ve tuzlama metodu) : paralonın değişme günü : süresi : ne zaman sonra değiştirilmeli : değiştirilmeden önceki uyarı günü : : :
+                            |3. $|
+  sudo komutu : geçici yönetici yetkilerini kullanmaya izin verir
+  
+Kullanıcı Ekleme
+
+1.  sudo useradd kullanıcı_adı
+  
+    parola tanımlama -> sudo passwd kullanıcı_adı
+  
+2.  sudo adduser kullanıcı_adı
+    
+    Farklı bir arayüze sahiptir.
+  
+  
+Kullanıcı Silme
+
+  1. sudo deluser kullanıcı_adı
+  
+  2. sudo userdel kullanıcı_adı

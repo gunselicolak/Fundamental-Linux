@@ -1,0 +1,43 @@
+Dosya İzinlerini Görüntüleme 
+
+"ls -al" komutu ile dosyaların izinleri görüntüleyebiliriz.
+Tablodaki ilk sütun dosya izinlerini verir
+d : dizin
+l: link
+- : normal dosya
+Sonraki 9 sembol :
+  ilk 3 sembol: sahipin erişim yetkileri
+              : grup erişim yetkileri
+              : herkese açık erişim yetkileri
+
+dosya çalıştırma ./uygulama_adı
+
+Dosya İzinlerinin Sayısal İfadesi 
+
+  Okuma(read) -> 4
+  Yazma(write) -> 2
+  Çalıştırma(execute) -> 1
+  
+  Var olan izinler toplanarak sayısal olarak ifade edilir.
+  
+Dosya İzinlerini Değiştirme
+
+  chmod : dosyaların izinlerini artırmamızı, azaltmamızı ve değiştirebiliriz.
+  
+    chmod +w dosya_adı -> kullanıcı ve gruplar için değiştirir.(herkes için değiştirmez.)
+    
+    chmod -x dosya_adı -> çalıştırma yetkisi kaldırma
+    
+    chmod -w *.tar
+    
+    r=4 w=2 x=1   ^C
+    640  ^C
+    
+    chmod 640 *.tar
+    
+    chmod 555 *.sh
+    
+    chmod -R 770 dizin_adı
+    
+    
+    
